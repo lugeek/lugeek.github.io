@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="{{ site.author }}" />
+    <title>{{ page.title }} | {{ site.author }}</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAB/B7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREQERAAAAAREREREQAAABEAARARAAAAEQABEBEAAAARAAEQEQAAABEAARARAAAAEQAAAAAAAAARAAAAAAAAABEAAAAAAAAAEQAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AADgjwAA4AcAAOcnAADnJwAA5ycAAOcnAADn/wAA5/8AAOf/AADn/wAA5/8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+    <link href="/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
+	<link href="/css/screen.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <div class="buttons">
+          <a href="/" class="ss-icon" title="主页">HOME</a>
+          <a href="/categories" class="ss-icon" title="分类" >LIST</a>
+          <a href="/tags" class="ss-icon" title="标签" >TAGS</a>
+          <a href="/guestbook" class="ss-icon" title="留言" >CHAT</a>
+          <a href="/about" class="ss-icon" title="关于" >ABOUT</a>
+          <a href="/feed" class="ss-icon" title="订阅" >RSS</a>
+        </div>
+        <h1>{{ page.title }}</h1>
+        </header>
+        <hr>
+        <article class="content">
+        {{ content }}
+        </article>
+      </div>
+
+    <footer>
+        <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2014 - {{site.time | date:"%Y"}} by <a href="http://lugeek.com/about/">Lugeek</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small></p>
+    </footer>
+
+    </div>
+  </body>
+</html>
