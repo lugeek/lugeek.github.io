@@ -2,5 +2,5 @@ markdown: rdiscount
 permalink: /:year/:month/:title/
 url: http://lugeek.github.io
 author: LUGEEK
-pygments: true
+highlighter: pygments
 paginate: 24
