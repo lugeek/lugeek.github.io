@@ -1,16 +1,28 @@
-#ArchLinux 安装笔记#
+---
+layout: post
+title: ArchLinux 安装笔记
+categories: Linux
+tags: archlinux xfce4
+---
+
 ### usbwriter 把archLinux的iso写入到U盘，重启安装。
 ### 安装程序会自动运行 dhcpcd 守护进程以尝试有线连接。可以用 ping 来检查是否连通。
 ### 有线的静态IP。
-  1. `# systemctl stop dhcpcd`停止dhcp。
-  2. `# ip link`查看有线的interface。en开头。
-  3. `# ip link set enp2s0f0 up`激活接口。
-  4. `# ip addr add 192.168.1.2/24 dev enp2s0f0`添加ip地址和掩码长度。
-  5. `# ip route add default via 192.168.1.1` 添加网关地址。
-  6. ```# nano /etc/resolv.conf
-        nameserver 223.5.5.5
-        nameserver 223.6.6.6
-    ```
+  1. `# systemctl stop dhcpcd`  
+  停止dhcp。
+  2. `# ip link`  
+  查看有线的interface。en开头。
+  3. `# ip link set enp2s0f0 up`  
+  激活接口。
+  4. `# ip addr add 192.168.1.2/24 dev enp2s0f0`  
+  添加ip地址和掩码长度。
+  5. `# ip route add default via 192.168.1.1`  
+  添加网关地址。
+  6. ```
+    # nano /etc/resolv.conf
+    nameserver 223.5.5.5
+    nameserver 223.6.6.6
+    ```  
     修改dns。
 
 ### 无线连接。
@@ -23,13 +35,16 @@
                 type managed
  1. 确定无线网络的端口。
  2. `wifi-menu` 进行连接。
- 3. 若`wifi-menu`不成功，可采用以下方法。
-   `# ip link set wlp3s0 up`激活无线接口。
-    `# ip link show wlp3s0`显示`UP`表示激活成功。
-    `iw dev wlp3s0 scan | grep SSID`扫描无线ssid。
-    `# wpa_supplicant -B -i wlp3s0 -c <(wpa_passphrase "ssid" "psk")`
-    将 ssid 替换为实际的网络名称，psk 替换为无线密码，请保留引号。
-    `# dhcpcd wlp3s0`进行连接。
+ 3. 若`wifi-menu`不成功，可采用以下方法。  
+   `# ip link set wlp3s0 up`  
+   激活无线接口。  
+    `# ip link show wlp3s0`  
+    显示`UP`表示激活成功。  
+    `iw dev wlp3s0 scan | grep SSID`  
+    扫描无线ssid。  
+    `# wpa_supplicant -B -i wlp3s0 -c <(wpa_passphrase "ssid" "psk")`  
+    将 ssid 替换为实际的网络名称，psk 替换为无线密码，请保留引号。  
+    `# dhcpcd wlp3s0`进行连接。  
 
 ### 分区并挂载。
   1. `fdisk -l`和`lsblk -f`可用于查看分区情况。
@@ -40,21 +55,24 @@
   6. `n`+`回车`+`+50G` 用于根目录/。
   7. `n`+`回车`+`回车` 用于/home目录。
   8. `w`保存分区。
-  9. `The partition table has been altered!
-    Calling ioctl() to re-read partition table.
-    Syncing disks. `表示分区成功。
-  10. `fdisk -l`查看刚刚所分的区的sda编号。
+  9. The partition table has been altered!  
+    Calling ioctl() to re-read partition table.  
+    Syncing disks.   
+    表示分区成功。
+  10. `fdisk -l`  
+  查看刚刚所分的区的sda编号。
   11. 创建文件系统。
   12. `# mkfs.ext4 /dev/sda5`
-  13. `# mkswap /dev/sda6`
-        `# swapon /dev/sda6`
+  13. `# mkswap /dev/sda6`  
+      `# swapon /dev/sda6`
   14. `# mkfs.ext4 /dev/sda7`
   15. `# mkfs.ext4 /dev/sda8`
   16. 挂载文件系统。
-  17. `# mount /dev/sda7 /mnt` 首先挂载根分区。
-  18. `# mkdir /mnt/boot`
+  17. `# mount /dev/sda7 /mnt`  
+  首先挂载根分区。
+  18. `# mkdir /mnt/boot`  
         `# mount /dev/sda5 /mnt/boot`
-  19. `# mkdir /mnt/home`
+  19. `# mkdir /mnt/home`  
         `# mount /dev/sda8 /mnt/home`
 
 ### 改镜像源
@@ -65,93 +83,94 @@
     ## Generated on 2012-MM-DD
     ##
     Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
-    ...
-
-将tsinghua的源复制到最前面。
+    ...  
+将tsinghua的源复制到最前面。  
 `pacman -Syy`更新源。
     
 ### 安装基本系统。
 `# pacstrap -i /mnt base base-devel`
     
 ### 生成fstab。
-`# genfstab -U -p /mnt >> /mnt/etc/fstab`
-`# nano /mnt/etc/fstab`查看是否写入成功。
+`# genfstab -U -p /mnt >> /mnt/etc/fstab`  
+`# nano /mnt/etc/fstab`  
+查看是否写入成功。
     
 ### Chroot 并开始配置新系统。
-`# arch-chroot /mnt /bin/bash`
-  1. locale配置。
-    ```# nano /etc/locale.gen
-    ...
-    #en_SG ISO-8859-1
-    en_US.UTF-8 UTF-8
-    #en_US ISO-8859-1
-    ...
-    ```
-    可以把zh_CN的都去掉注释。en_US.UTF-8也注释掉。
-    `# locale-gen`重新生成。
-    `# echo LANG=en_US.UTF-8 > /etc/locale.conf`修改语言为英文，改为中文的话终端中可能会出现乱码。
-  2. 时区。
-    `# ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
-  3. 时间。
-    `# hwclock --systohc --utc`硬件时间。
-  4. Hostname。
-    `# echo myhostname > /etc/hostname`
-    ```# nano /etc/hosts
-    #
-    # /etc/hosts: static lookup table for host names
-    #
-    
-    #<ip-address>	<hostname.domain.org>	<hostname>
-    127.0.0.1	localhost.localdomain	localhost	myhostname
-    ::1		    localhost.localdomain	localhost   myhostname
-    
-    # End of file```
-  5. 配置网络。
-     enable之后下次开机将自启动。
-     1. 有线动态
-        `# systemctl enable dhcpcd@interface_name.service`
-     2. 有线动态netctl
-        从 /etc/netctl/examples 复制个配置样本到 /etc/netctl:
-        `# cd /etc/netctl`
-        `# cp examples/ethernet-dhcp my_network`
-        再按需编辑配置文件，也别忘了修改 Interface 为实际的接口名。
-        `# nano my_network`
-        启用 my_network 配置：
-        `# netctl enable my_network`
-    3. 有线静态netctl
-        从 /etc/netctl/examples 复制个配置样本到 /etc/netctl:
-       ` # cd /etc/netctl`
-        `# cp examples/ethernet-static my_network`
-        按需配置配置文件，即修改 Interface, Address, Gateway 和 DNS) 参数：
-       ` # nano my_network`
-        Address中的 /24 为掩码 255.255.255.0 的 CIDR 标记方式。
-        启用 my_network 配置：
-        `# netctl enable my_network`
-    4. 无线wifi-menu
-        `# pacman -S dialog iw wpa_supplicant`
-        `# wifi-menu`
-    5. 无线netctl
-        安装必要的包
-        `pacman -S iw wpa_supplicant wpa_actiond net-tools`
-        从 /etc/netctl/examples 复制个配置样本到 /etc/netctl:
-        `# cd /etc/netctl`
-        `# cp examples/wireless-wpa my_network`
-        按照需要修改模版，即参数 (Interface、ESSID 与 Key):
-        `# nano my_network`
-        自动启动：
-        `# netctl enable my_network`
-    6. 设置 Root 密码
-        `# passwd`
-    7. 安装grub
-        `# pacman -S grub`
-        通过添加--grub-setup=/bin/true选项,grub-install命令会填充          /boot/grub文件夹并生成/boot/grub/i386-pc/core.img,但是不会将        grub启动引导代码嵌入到MBR,post-MBR gap和分区引导扇区中:
-        `# grub-install --target=i386-pc --grub-setup=/bin/true --recheck --debug /dev/sda`
-        `# grub-mkconfig -o /boot/grub/grub.cfg`生成配置文件。
-    8. 离开 chroot 环境：
-        `# exit`
-        重启计算机：
-        `# reboot`
-
+`# arch-chroot /mnt /bin/bash`  
+  1. locale配置。  
+    # nano /etc/locale.gen  
+    ...  
+    #en_SG ISO-8859-1  
+    en_US.UTF-8 UTF-8  
+    #en_US ISO-8859-1  
+    ...  
+    可以把zh_CN的都去掉注释。en_US.UTF-8也注释掉。  
+    `# locale-gen`  
+    重新生成。  
+    `# echo LANG=en_US.UTF-8 > /etc/locale.conf`  
+    修改语言为英文，改为中文的话终端中可能会出现乱码。  
+  2. 时区。  
+    `# ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`  
+  3. 时间。  
+    `# hwclock --systohc --utc`  
+    硬件时间。  
+  4. Hostname。  
+    `# echo myhostname > /etc/hostname`  
+    # nano /etc/hosts  
+    #  
+    # /etc/hosts: static lookup table for host names  
+    #  
+    #<ip-address>	<hostname.domain.org>	<hostname>  
+    127.0.0.1	localhost.localdomain	localhost	myhostname  
+    ::1		    localhost.localdomain	localhost   myhostname  
+    # End of file  
+  5. 配置网络。  
+     enable之后下次开机将自启动。  
+	
+		1. 有线动态  
+		   `# systemctl enable dhcpcd@interface_name.service`  
+		2. 有线动态netctl  
+		   从 /etc/netctl/examples 复制个配置样本到 /etc/netctl:  
+		   `# cd /etc/netctl`  
+		   `# cp examples/ethernet-dhcp my_network`  
+		   再按需编辑配置文件，也别忘了修改 Interface 为实际的接口名。  
+		   `# nano my_network`  
+		   启用 my_network 配置：  
+		   `# netctl enable my_network`  
+		3. 有线静态netctl  
+		   从 /etc/netctl/examples 复制个配置样本到 /etc/netctl:  
+		   ` # cd /etc/netctl`  
+		   `# cp examples/ethernet-static my_network`  
+		   按需配置配置文件，即修改 Interface, Address, Gateway 和 DNS) 参数：  
+		   ` # nano my_network`  
+		   Address中的 /24 为掩码 255.255.255.0 的 CIDR 标记方式。  
+		   启用 my_network 配置：  
+		   `# netctl enable my_network`  
+		4. 无线wifi-menu  
+		   `# pacman -S dialog iw wpa_supplicant`  
+		   `# wifi-menu`  
+		5. 无线netctl  
+		   安装必要的包  
+		   `pacman -S iw wpa_supplicant wpa_actiond net-tools`  
+		   从 /etc/netctl/examples 复制个配置样本到 /etc/netctl:  
+		   `# cd /etc/netctl`  
+		   `# cp examples/wireless-wpa my_network`  
+		   按照需要修改模版，即参数 (Interface、ESSID 与 Key):  
+		   `# nano my_network`  
+		   自动启动：  
+		   `# netctl enable my_network` 
+         
+  6. 设置 Root 密码  
+     `# passwd`  
+  7. 安装grub  
+     `# pacman -S grub`  
+      通过添加--grub-setup=/bin/true选项,grub-install命令会填充          /boot/grub文件夹并生成/boot/grub/i386-pc/core.img,但是不会将        grub启动引导代码嵌入到MBR,post-MBR gap和分区引导扇区中:  
+     `# grub-install --target=i386-pc --grub-setup=/bin/true --recheck --debug /dev/sda`  
+     `# grub-mkconfig -o /boot/grub/grub.cfg`生成配置文件。  
+  8. 离开 chroot 环境：  
+     `# exit`  
+      重启计算机：  
+     `# reboot`  
 >**Troubleshooting**:在采用有线网络时，由于是校园网的关系，采用网页认证的方式，在命令行进行`pacman -Syy`时会造成下载多余的sig包，产生no data的错误。在校园网通过无线路由器转换后错误消失。在完成桌面打安装后，连接有线网，然后打开浏览器确定可以上网，在这样打情况下，`pacman -Syy`没有产生错误.
 
 ###用easyBCD配置启动引导，选择Grub 2，将boot分区添加为启动项
