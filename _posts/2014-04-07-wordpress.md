@@ -2,10 +2,12 @@
 layout: post
 title: Wordpress
 categories:
-- Website
+- 技术
 tags:
 - wordpress
 ---
+
+![wordpress]({{ site.url }}/images/2014-04-07-wordpress.png)  
 搞了vps，搞了openvpn，搞了wordpress，中间遇到了各种小白问题，不想折腾了…  
 
 SAE和BAE虽然比较接地气，但是云主机现在不是很成熟，跟传统意义上的主机比，虽然多了一些方便，但是也多了一些限制。搭建WordPress都没问题，但是会有阉割，而且不能绑定未备案的域名，总之用起来感觉不爽。还有GAE，是SAE和BAE的先驱啊，按着开发指南搭建WordPress，但是到了创建数据库的时候居然要收费，一个月大致好几十…还是算了…  

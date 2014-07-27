@@ -1,9 +1,12 @@
 ---
 layout: post
 title: ArchLinux 安装记录
-categories: Linux
-tags: archlinux
+categories: 技术
+tags: Linux
 ---
+
+![archlinux]({{ site.url }}/images/2014-07-15-archlinux.jpg)
+
 ###usbwriter 把archLinux的iso写入到U盘，重启安装。
 ###安装程序会自动运行 dhcpcd 守护进程以尝试有线连接。可以用 ping 来检查是否连通。
 ###有线的静态IP。
@@ -18,13 +21,14 @@ tags: archlinux
 5. `# ip route add default via 192.168.1.1`  
    添加网关地址。
 6. 修改dns。
-
-        # nano /etc/resolv.conf
-        nameserver 223.5.5.5
-        nameserver 223.6.6.6
+```bash
+    # nano /etc/resolv.conf
+    nameserver 223.5.5.5
+    nameserver 223.6.6.6
+```
 
 ###无线连接。
-1. 确定无线网络的端口。
+1. 确定无线网络的端口。  
 
         # iw dev
             phy#0
@@ -33,7 +37,7 @@ tags: archlinux
                     wdev 0x1
                     addr 00:21:6a:5e:52:bc
                     type managed
-                    
+
 2. `wifi-menu`  
    进行连接。
 3. 若`wifi-menu`不成功，可采用以下方法。  
@@ -518,5 +522,17 @@ tags: archlinux
     `yaourt python-markdown`  
     `yaourt python-docutils`   
     `yaourt python-pyenchant`  
+    
+28. pygments
+    pygments是一款代码高亮工具，基于python，在jekyll中用到了它来使代码高亮。
+    `pacman -S python-pygments`本地安装。  
+    上述方法安装之后没有`pygmentize`,改用下面的方法。
+    `yaourt -Rs python-pygments`  
+    `pacman -S python2-pygments`  
+    `pygmentize -S monokai -f html > pygments.css`  
+    [查看更多style](http://pygments.org/demo/459224/?style=monokai)  
+    
+    
+    
 
 原创文章，转载请注明出处：转自[LUGEEK](http://lugeek.github.io)。

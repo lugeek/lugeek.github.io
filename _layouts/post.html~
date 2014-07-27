@@ -43,7 +43,5 @@ layout: default
 			{% endif %}
       </ul>
   </div>
-  <div class="article-inner article-comment">
-        {% include duoshuo.html %}
-  </div>
+  {% include duoshuo.html %}
 </section>

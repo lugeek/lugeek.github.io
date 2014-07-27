@@ -1,0 +1,431 @@
+
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+body, html {
+margin: 0px;
+height: 100%;
+overflow: hidden;
+}
+
+.container {
+width: 100%;
+height: 100%;
+}
+
+#site {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  z-index: 1;
+  background: #eee;
+}
+
+.header {
+  height: 300px;
+  position: relative;
+border-bottom: 1px solid #ddd;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/background.jpg") center #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+}
+
+#contents {
+  zoom: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.article {
+  margin: 50px 0;
+}
+.article-date2 {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+  margin-bottom: 1em;
+  margin-left: 5px;
+  line-height: 1em;
+  text-shadow: 0 1px #fff;
+  font-weight: bold;
+}
+
+.article-inner {
+  overflow: hidden;
+  background: #fff;
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/*这里的overflow: hidden;可以使选中的颜色不越界！*/
+
+.article-comment {
+margin-top: 50px;
+padding: 10px;
+}
+
+.article-header {
+  padding: 20px 20px 0;
+}
+
+.article-header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.article-title {
+  text-decoration: none;
+
+  font-weight: bold;
+  color: #555;
+  line-height: 1.1em;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.article-entry {
+  zoom: 1;
+  color: #555;
+  padding: 0 20px;
+}
+
+.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6 {
+  line-height: 1.1em;
+  margin: 1.1em 0;
+  font-weight: bold;
+}
+
+.article-entry p {
+  line-height: 1.6em;
+  margin: 1.6em 0;
+}
+
+.article-entry img, .article-entry video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.article-entry .highlight {
+  background: #2d2d2d;
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px 0;
+  overflow: auto;
+  color: #ccc;
+  line-height: 22.400000000000002px;
+}
+
+.article-entry .highlight pre {
+border: none;
+margin: 0;
+padding: 0;
+background: #2d2d2d;
+overflow: auto;
+color: #ccc;
+line-height: 22.400000000000002px;
+}
+
+.article-entry blockquote {
+overflow: hidden;
+border-left: 5px solid #66ccff;
+}
+
+.article-entry blockquote p {
+margin-top: 0;
+}
+
+.article-entry ul, .article-entry ol, .article-entry dl {
+margin: 1.6em 20px;
+line-height: 1.6em;
+}
+
+.article-entry ul {
+list-style: disc;
+}
+
+.article-entry ol p, .article-entry ul p{
+margin-top: 0;
+margin-bottom:0;
+}
+
+.article-entry li ul, .article-entry li ol{
+margin:0;
+}
+
+.article-more-link a {
+  display: inline-block;
+  line-height: 1em;
+  padding: 6px 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: #eee;
+  color: #999;
+  text-shadow: 0 1px #fff;
+  text-decoration: none;
+}
+
+.article-footer {
+  zoom: 1;
+  font-size: .85em;
+  line-height: 1.6em;
+  border-top: 1px solid #ddd;
+  padding-top: 1.6em;
+  margin: 0 20px 20px;
+  overflow: hidden;
+}
+/*子用float，父无法撑开，加overflow: hidden解决*/
+.article-footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+.article-footer ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-footer-tag {
+  float: left;
+  margin-right: 10px;
+}
+
+.footer {
+  background: #262a30;
+  padding: 50px 0;
+  border-top: 1px solid #ddd;
+  color: #999;
+}
+
+#footer {
+  zoom: 1;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#footer p {
+  line-height: 1.6em;
+  font-size: .85em;
+  display: inline;
+  float: left;
+  width: 97.7777777777778%;
+  margin: 0 1.1111111111111%;
+}
+
+#page-nav {
+zoom: 1;
+margin: 50px auto;
+background: #fff;
+-webkit-box-shadow: 1px 2px 3px #ddd;
+box-shadow: 1px 2px 3px #ddd;
+border: 1px solid #ddd;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+text-align: center;
+color: #999;
+overflow: hidden;
+}
+
+#page-nav .page-number {
+display: inline-block;
+}
+
+#page-nav .current {
+color: #555;
+font-weight: bold;
+}
+
+#page-nav a, #page-nav span {
+padding: 10px 20px;
+}
+
+#page-nav a {
+color: #999;
+text-decoration: none;
+}
+
+#page-nav a:hover {
+color: #fff;
+background-color: #999;
+text-decoration: none;
+}
+
+#page-nav .next {
+float: right;
+}
+
+#page-nav .previous {
+float: left;
+}
+
+#page-nav .space {
+color: #ddd;
+}
+
+
+#btn-nav {
+position:fixed;
+right:20px;
+top:10px;
+}
+
+#nav_btn {
+height:45px;
+width:45px;
+
+}
+
+.btn-off {
+background: url("/images/off.gif") center no-repeat;
+}
+
+.btn-on {
+background: url("/images/on.gif") center no-repeat;
+}
+
+.row {
+height: 100%;
+}
+
+.aside {
+background-color: #262a30;
+height: 100%;
+padding-left: 0px;
+padding-right: 0px;
+text-align: center;
+}
+
+.aside3 {
+height: 100%;
+overflow-y: auto;
+}
+
+#head-link {
+text-decoration: none;
+}
+
+#head-image {
+width: 50%;
+height: width;
+border-radius: 50%;
+}
+
+#head-name {
+color: #999;
+margin: 1.6em;
+display: inline-block;
+}
+
+.nav-link-outer {
+position: relative;
+display: block;
+line-height: 2em;
+margin:1em 0;
+}
+
+.nav-link-outer a{
+padding: 7px 20px;
+color: #999
+}
+
+.nav-link-outer a:hover{
+color: #fff;
+background-color: #999;
+text-decoration: none;
+border-radius: 0;
+}
+
+.one-item {
+margin: 50px 0;
+}
+
+.item-name {
+text-decoration: none;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #999;
+margin-bottom: 1em;
+margin-left: 5px;
+line-height: 1em;
+text-shadow: 0 1px #fff;
+font-weight: bold;
+}
+
+.item-content .row {
+margin-right: 0;
+margin-left: 0;
+}
+
+.item-article {
+padding: 10px;
+margin-bottom: 10px;
+background: #fff;
+-webkit-box-shadow: 1px 2px 3px #ddd;
+box-shadow: 1px 2px 3px #ddd;
+border: 1px solid #ddd;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+height: 6em;
+}
+/*height:6em;解决标题需要两行后col目录和标签页的乱续问题*/
+
+.item-content-time {
+color: #999;
+text-decoration: none;
+font-size: .85em;
+line-height: 1em;
+margin-bottom: .5em;
+display: block;
+}
+
+.item-content-title {
+text-decoration: none;
+font-weight: bold;
+color: #555;
+-webkit-transition: color 0.2s;
+-moz-transition: color 0.2s;
+-o-transition: color 0.2s;
+-ms-transition: color 0.2s;
+transition: color 0.2s;
+line-height: 1.6em;
+}
+
+/*****************************************************************************/
+/*
+/* Post
+/*
+/*****************************************************************************/
+
+

@@ -1,52 +1,73 @@
 ---
-title: Program明
-layout: page
+layout: default
+title: 人强码壮
 ---
 
-<ul class="listing">
-{% for post in paginator.posts %}
-  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
-  {% if year != y %}
-    {% assign year = y %}
-    <li class="listing-seperator">{{ y }}</li>
-  {% endif %}
-  <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+<div id="home">
+  {% for post in paginator.posts %}
+  <article class="article">
+    <div class="article-date1">
+      <a href="{{ post.url }}" class="article-date2">{{ post.date | date:"%Y/%m/%d" }}</a>
+    </div>
+    <div class="article-inner">
+      <header class="article-header">
+        <h1>
+           <a href="{{ post.url }}" class="article-title">{{ post.title }}</a>
+        </h1>
+      </header>
+      <div class="article-entry">
+        <p>{{ post.excerpt }}</p>
+        <p class="article-more-link">
+	   <a href="{{ post.url }}">Read More</a>
+        </p>
+      </div>
+      <footer class="article-footer">
+        <ul>
+	  <span class="article-footer-tag">Tags: </span>
+	  {% for tag in post.tags %}
+	  <li class="article-footer-tag"> <a href="/tags">{{ tag }}</a> </li>
+	  {% endfor %}
+	  <span class="article-footer-tag"> | </span>
+	  <span class="article-footer-tag"> Categoriy: </span>
+	  {% for category in post.categories %}
+	  <li class="article-footer-tag"> <a href="/categories">{{ category }}</a> </li>
+	  {% endfor %}
+	 </ul>
+      </footer>
+    </div>
+  </article>
+  {% endfor %}
 
-<div id="post-pagination" class="paginator">
-
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-    <a href="/"><前页</a>
+  <nav id="page-nav">
+    {% if paginator.previous_page %}
+		{% if paginator.previous_page == 1 %}
+			<a class="previous" href="/">« Prev</a>
+		{% else %}
+			<a class="previous" href="{{ paginator.previous_page_path }}">« Prev</a>
+		{% endif %}
+	{% else %}
+		<span class="previous disabled">« Prev</span>
+	{% endif %}
+	
+	{% if paginator.page == 1 %}
+    	<span class="page-number current">1</span>
     {% else %}
-    <a href="/page{{paginator.previous_page}}"><前页</a>
+    	<a class="page-number" href="/">1</a> 
     {% endif %}
-  {% else %}
-    <span class="previous disabled"><前页</span>
-  {% endif %}
 
-      {% if paginator.page == 1 %}
-      <span class="current-page">1</span>
-      {% else %}
-      <a href="/">1</a>
-      {% endif %}
-
-    {% for count in (2..paginator.total_pages) %}
+	{% for count in (2..paginator.total_pages) %}
       {% if count == paginator.page %}
-      <span class="current-page">{{count}}</span>
+      <span class="page-number current">{{count}}</span>
       {% else %}
-      <a href="/page{{count}}">{{count}}</a>
+      <a class="page-number" href="/page{{count}}">{{count}}</a>
       {% endif %}
     {% endfor %}
 
-  {% if paginator.next_page %}
-    <a class="next" href="/page{{paginator.next_page}}">后页></a>
-  {% else %}
-    <span class="next disabled" >后页></span>
-  {% endif %}
-  (共{{ paginator.total_posts }}篇)
+	{% if paginator.next_page %}
+    	<a class="next" href="{{ paginator.next_page_path }}">Next »</a>
+  	{% else %}
+    	<span class="next disabled" >Next »</span>
+  	{% endif %}
+  </nav>
+</ul>
 </div>

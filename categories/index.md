@@ -1,22 +1,29 @@
 ---
-title: Categories
-layout: page
+title: 目录
+layout: default
 ---
 
-<div id='tag_cloud'>
-{% for cat in site.categories %}
-<a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a>
-{% endfor %}
+<div id="pages">
+    {% for cat in site.categories %}
+        <div class="one-item">
+            <div class="item-name">
+                {{ cat[0] }}
+                <span class="badge">{{ cat[1].size }}</span>
+            </div>
+            <div class="item-content">
+                <div class="row">
+                    {% for post in cat[1] %}
+                        <div class="item-article col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="item-content-time">
+                                {{ post.date | date:"%Y/%m/%d" }}
+                            </div>
+                            <div class="item-content-title">
+                                <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
 </div>
-
-<ul class="listing">
-{% for cat in site.categories %}
-  <li class="listing-seperator" id="{{ cat[0] }}">{{ cat[0] }}</li>
-{% for post in cat[1] %}
-  <li class="listing-item">
-  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
-{% endfor %}
-</ul>

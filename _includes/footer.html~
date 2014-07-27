@@ -1,0 +1,8 @@
+<div id="footer">
+    <p>© 2014 LUGEEK</p>
+</div>
+<div id="btn-nav">
+  <button id="nav_btn" class="btn btn-lg btn-off menu-btn" value="off" onclick="nav_click(this)" title="Menu"></button>
+</div>
+<script src="/public/js/jquery.min.js"></script>
+<script src="/public/js/nav.js"></script>

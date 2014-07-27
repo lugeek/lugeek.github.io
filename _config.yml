@@ -1,6 +1,7 @@
-markdown: rdiscount
-permalink: /:year/:month/:title/
-url: http://lugeek.github.io
+name: 人强码壮
 author: LUGEEK
-highlighter: pygments
-paginate: 24
+markdown: redcarpet
+pygments: true
+url: http://lugeek.github.io
+permalink: /:year/:month/:title/
+paginate: 5
