@@ -260,6 +260,7 @@ tags: Linux
     开启goagent  
     chrome打开设置－管理证书－授权中心－Authorities，导入 /usr/share/goagent/local/CA.crt，弹出窗口的三条选项均勾选。  
     注意: 如果第一次安装 GoAgent 尝试到此步骤时发现该文件不存在，请先启动一次 GoAgent 后再重新尝试。
+    /etc/goagent becomes user configuration for goagent. Put any customization there, not the default settings. For details, please refer to wiki: https://wiki.archlinux.org/index.php?title=GoAgent_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
     
 9. 聊天pidgin  
     `pacman -S pidgin`  
@@ -406,6 +407,7 @@ tags: Linux
     `pacman -S audacious`  
 20. 图片处理  
     `pacman -S gimp`
+    `sudo pacman -S ristretto`
 21. Android开发环境  
     `sudo nano /etc/pacman.conf`  
     
