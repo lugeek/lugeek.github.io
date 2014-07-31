@@ -281,6 +281,7 @@ tags: Linux
 12. pdf  
     其实google-chrome已经可以看pdf了，现在安装另外一个pdf阅读器evince  
     `pacman -S evince`  
+    `sudo pacman -S poppler-data`解决中文pdf无法显示的问题。
 13. 编辑器emacs  
     `pacman -S emacs`  
     在终端下 `emacs -nw` 打开emacs  
