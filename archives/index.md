@@ -23,7 +23,7 @@ layout: default
                                                 {{ post2.date | date:"%Y/%m/%d" }}
                                             </div>
                                             <div class="item-content-title">
-                                                <a href="{{ site.url }}{{ post.url }}">{{ post2.title }}</a>
+                                                <a href="{{ site.url }}{{ post2.url }}">{{ post2.title }}</a>
                                             </div>
                                         </div>
                                     {% endif %}
