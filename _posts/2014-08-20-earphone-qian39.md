@@ -1,8 +1,8 @@
 ---
-layout:post
-title:耳机初烧——潜39
-categories:生活
-tags:数码
+layout: post
+title: 耳机初烧——潜39
+categories: 生活
+tags: 数码
 ---
 
 ![耳机]({{ site.url }}/images/2014-08-20-earphone-qian39.jpg)
