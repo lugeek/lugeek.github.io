@@ -206,7 +206,8 @@ tags: Linux
 
     `pacman -Syy`  
     `pacman -S yaourt`  
-    
+    `yaourt -Q --date`查看已安装的软件包
+    `pacman -Rs package`删除软件包和其所有没有被其他已安装软件包使用的依赖关系
 3. 浏览器  
     `pacman -S firefox firefox-i18n-zh-cn flashplugin`  
     火狐浏览器  
@@ -288,6 +289,8 @@ tags: Linux
     `emacs --daemon` 加入守护进程，提高速度。  
     `emacsclient -nw` 或终端下 `emacsclient -t` 打开加入守护进程打emacs   
     `pacman -S gedit`菜鸟编辑器…
+    `yaourt emacs-markdown-mode-git`emacs的markdownmode
+    `pacman -S markdown`markdown转换为html的支持
 14. 视频播放器  
     `pacman -S mplayer`  
     但是这个播放器貌似只具有最基础的播放功能，没有其他功能。  
