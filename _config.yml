@@ -5,3 +5,4 @@ pygments: true
 url: http://lugeek.com
 permalink: /:year/:month/:title/
 paginate: 5
+year: 2014

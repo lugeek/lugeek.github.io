@@ -1,7 +1,0 @@
-name: 人强码壮
-author: LUGEEK
-markdown: redcarpet
-pygments: true
-url: http://lugeek.github.io
-permalink: /:year/:month/:title/
-paginate: 5

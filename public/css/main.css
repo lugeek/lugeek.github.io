@@ -232,7 +232,7 @@ margin:0;
   zoom: 1;
   max-width: 920px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 #footer p {
@@ -240,8 +240,12 @@ margin:0;
   font-size: .85em;
   display: inline;
   float: left;
-  width: 97.7777777777778%;
-  margin: 0 1.1111111111111%;
+}
+#footer a {
+  line-height: 1.6em;
+  font-size: .85em;
+  display: inline;
+  float: right;
 }
 
 #page-nav {
