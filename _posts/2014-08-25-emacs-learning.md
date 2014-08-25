@@ -166,6 +166,7 @@ tags: Emacs
 ##markdown
 
 + 将markdown-mode.el复制到~/.emacs.d/下面，在~/.emacs中添加
+
 ```lisp
     (autoload 'markdown-mode "markdown-mode"
        "Major mode for editing Markdown files" t)
@@ -173,7 +174,8 @@ tags: Emacs
     (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
     (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 ```
-+ `ctrl+c ctrl+c p`:转换为html文件并打开，可能会没有markdown支持，有两种办法
+
++ `ctrl+c ctrl+c p`:转换为html文件并打开，可能会没有markdown支持，有两种办法:
     + `pacman -S markdown`:安装markdown
     + `ln -s markdown_py markdown`:在/usr/bin生成markdown的符号链接
 
