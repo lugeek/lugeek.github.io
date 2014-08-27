@@ -206,3 +206,77 @@ tags: Emacs
 + 无序列表项以‘-’、‘+’或者‘*‘开头。
 + 有序列表项以‘1.’或者‘1)’开头。
 + `ctrl+c ctrl+e`：发表
+
+##C/C++ 开发环境搭建
+###package管理
+```lisp
+; start package.el with emacs
+(require 'package)
+; add MELPA to repository list
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+; initialize package.el
+(package-initialize)
+```
+ps.加了这个库之后，可以查看更多的包并安装
+
+`alt+x package-list-packages`查看库中的包，可以选择安装，按i待安装，按x执行。
+
+###auto-complete
+1. `alt+x package-list-packages`
+2. `ctrl+s`搜索auto-complete,用i标记，x安装
+3. 修改~/.emacs,加入以下代码
+
+        ; start auto-complete with emacs
+        (require 'auto-complete)
+        ; do default config for auto-complete
+        (require 'auto-complete-config)
+        (ac-config-default)
+重启emacs，神奇的魔法诞生了，自动补全有了！
+
+4. 同样的方式安装`yasnippet`
+5. 配置~/.emacs
+
+        ; start yasnippet with emacs
+        (require 'yasnippet)
+        (yas-global-mode 1)
+yasnippet可以根据语义和语法结构进行补全，比如打`fo`按`TAB`就会出现选择，按`TAB`选择，回车，整个for结构就出来了。
+
+6. 安装`auto-complete-c-headers`
+7. `gcc -xc++ -E -v -`查看c++头文件所在的文件夹（感觉非必须）
+8. 配置~/.emacs
+
+        ; let's define a function which initializes auto-complete-c-headers and gets called for c/c++ hooks                                    
+        (defun my:ac-c-header-init ()
+          (require 'auto-complete-c-headers)
+          (add-to-list 'ac-sources 'ac-source-c-headers)
+          (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/include")
+        )
+        ; now let's call this function from c/c++ hooks                                                                                        
+        (add-hook 'c++-mode-hook 'my:ac-c-header-init)
+        (add-hook 'c-mode-hook 'my:ac-c-header-init)
+其中的路径就是通过第7步查看的，但是不加这一句，头文件照样可以自动不齐，可能非必须。
+
+###cedet
+
+1. Semantic（cedet中的一个，cedet已经内置），只需配置.emacs
+
+        ; turn on Semantic
+        (semantic-mode 1)
+        ; let's define a function which adds semantic as a suggestion backend to auto complete
+        ; and hook this function to c-mode-common-hook
+        (defun my:add-semantic-to-autocomplete() 
+          (add-to-list 'ac-sources 'ac-source-semantic)
+        )
+        (add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+        (global-semantic-idle-scheduler-mode 1)
+        
+2. EDE
+
+        ; turn on ede mode 
+        (global-ede-mode 1)
+        ; create a project for our program.
+        (ede-cpp-root-project "my project" :file "~/demos/my_program/src/main.cpp"
+        		      :include-path '("/../my_inc"))
+        ; you can use system-include-path for setting up the system header file locations.
+        ; turn on automatic reparsing of open buffers in semantic
+        
