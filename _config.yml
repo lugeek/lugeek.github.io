@@ -3,6 +3,6 @@ author: LUGEEK
 markdown: redcarpet
 pygments: true
 url: http://lugeek.com
-permalink: /:year/:month/:title/
+permalink: /:year/:month/:day/:title/
 paginate: 5
 year: 2014
