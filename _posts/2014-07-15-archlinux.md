@@ -3,7 +3,7 @@ layout: post
 title: ArchLinux 安装记录
 categories: 技术
 tags: Linux
-alias: [2014-07-15-archlinux/]
+alias: [/2014/07/archlinux/]
 ---
 
 ![archlinux]({{ site.url }}/images/2014-07-15-archlinux.jpg)
