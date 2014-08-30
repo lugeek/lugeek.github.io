@@ -1,3 +1,4 @@
+User-agent: Googlebot
 Disallow: /2014/08/emacs-learning/
 Disallow: /2014/07/archlinux/
 Disallow: /2014/06/view-findviewbyid-null/
