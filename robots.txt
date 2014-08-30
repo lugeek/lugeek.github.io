@@ -1,0 +1,10 @@
+Disallow: /2014/08/emacs-learning/
+Disallow: /2014/07/archlinux/
+Disallow: /2014/06/view-findviewbyid-null/
+Disallow: /2014/05/Nexus-4-Root/
+Disallow: /2014/05/android-sharedpreference-StringSet/
+Disallow: /2014/04/freshman-in-git/
+Disallow: /2014/04/pc-android-send-voice-and-draw/
+Disallow: /2014/04/wordpress/
+Disallow: /2014/08/summer-music/
+Disallow: /2014/08/earphone-qian39/
