@@ -4,8 +4,7 @@ title: ArchLinux 安装记录
 categories: 技术
 tags: Linux
 ---
-<meta http-equiv="refresh" content="0; url=http://lugeek.com/2014/07/archlinux/">
-<link rel="canonical" href="http://lugeek.com/2014/07/15/archlinux/" />
+
 ![archlinux]({{ site.url }}/images/2014-07-15-archlinux.jpg)
 
 ###usbwriter 把archLinux的iso写入到U盘，重启安装。
