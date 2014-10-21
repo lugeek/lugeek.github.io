@@ -5,7 +5,7 @@ categories: 技术
 tags: android
 ---
 
-![view]({{ site.url }}/images/2014-06-11-view-findviewbyid-null.png)
+![view]({{ site.url }}/images/2014-06-11/view-findviewbyid-null.png)
 
 有时候我们会自定义一个view，然后在XML里面进行静态的设置，比如下面的代码： 
  

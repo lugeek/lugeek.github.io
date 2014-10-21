@@ -5,7 +5,7 @@ categories: 生活
 tags: 数码
 ---
 
-![耳机]({{ site.url }}/images/2014-08-20-earphone-qian39.jpg)
+![耳机]({{ site.url }}/images/2014-08-20/earphone-qian39.jpg)
 木耳，为发烧而生！
 
 一直都用买手机附赠的耳机听歌，还乐在其中…之前在体验店试听了Bose的耳机，我也是醉了…

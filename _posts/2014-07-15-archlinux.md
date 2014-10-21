@@ -5,7 +5,7 @@ categories: 技术
 tags: Linux
 ---
 
-![archlinux]({{ site.url }}/images/2014-07-15-archlinux.jpg)
+![archlinux]({{ site.url }}/images/2014-07-15/archlinux.jpg)
 
 ###usbwriter 把archLinux的iso写入到U盘，重启安装。
 ###安装程序会自动运行 dhcpcd 守护进程以尝试有线连接。可以用 ping 来检查是否连通。

@@ -312,11 +312,11 @@ width:45px;
 }
 
 .btn-off {
-background: url("/images/off.gif") center no-repeat;
+background: url("/images/off.png") center no-repeat;
 }
 
 .btn-on {
-background: url("/images/on.gif") center no-repeat;
+background: url("/images/on.png") center no-repeat;
 }
 
 .row {

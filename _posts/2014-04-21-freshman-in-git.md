@@ -7,7 +7,7 @@ tags:
 - git
 ---
 
-![git]({{ site.url }}/images/2014-04-21-freshman-in-git.png )
+![git]({{ site.url }}/images/2014-04-21/freshman-in-git.png )
 
 + 关于Git的一些记录，详见：[Learn Version Control with Git](http://www.git-tower.com/learn/ebook/command-line/introduction#start)  
 + Git-简易指南：[点这里](http://www.bootcss.com/p/git-guide/)  

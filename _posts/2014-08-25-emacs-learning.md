@@ -5,7 +5,7 @@ categories: 技术
 tags: Emacs
 ---
 
-![emacs]({{ site.url }}/images/2014-08-25-emacs-learning.png)
+![emacs]({{ site.url }}/images/2014-08-25/emacs-learning.png)
 
 ##常用
 + `ctrl+p`: 光标上移

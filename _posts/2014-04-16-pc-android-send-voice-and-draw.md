@@ -8,7 +8,7 @@ tags:
 - android
 ---
 
-![显示效果]({{ site.url }}/images/2014-04-16-pc-android-send-voice-and-draw.png)  
+![显示效果]({{ site.url }}/images/2014-04-16/pc-android-send-voice-and-draw.png)  
 **摘要**：在PC端通过麦克风获取音频数据，并将音频数据通过UDP的方式实时地发送出去。在Android端接收PC端传送过来的音频数据，通过扬声器播放出来，并且绘制音频的波形图，对实时性要求非常高。
 
 ##PC端关键代码分析##

@@ -5,7 +5,7 @@ categories: 技术
 tags: android
 ---
 
-![faceimage]({{ site.url }}/images/2014-05-15-android-sharedpreference-StringSet.jpg)  
+![faceimage]({{ site.url }}/images/2014-05-15/android-sharedpreference-StringSet.jpg)  
 一般我们需要用到SharedPreferences来存储简单的配置项，比如说Boolean、String、Float、Long或Int值，这些值存储之后，在下次打开应用的时候就能取出来，然后采取相应的措施。
  
 当我们需要存储复杂的数据的时候，api当中引入了Set，这是一种集合，跟List类似，只是不能存储重复变量，而且是无序的。
