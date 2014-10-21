@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Wordpress
+description: 一个小白搭建个人博客的心酸历程。
 categories:
 - 技术
 tags:

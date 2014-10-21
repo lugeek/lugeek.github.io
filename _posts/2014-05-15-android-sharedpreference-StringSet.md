@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Android的SharedPreferences中StringSet不更新的问题
+description: 关于SharedPreferences中putStringSet和getStringSet失败的解决办法。
 categories: 技术
 tags: android
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ArchLinux 安装记录
+description: 非常详细的罗列了archlinux的安装过程，实现win7与Archlinux双系统共存。
 categories: 技术
 tags: Linux
 ---

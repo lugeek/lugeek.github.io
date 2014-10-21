@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 自定义的view通过findviewbyid返回为null的解决办法
+description: 创建自定义的View组建时，通过修改构造函数来解决无法获取view的id的问题。
 categories: 技术
 tags: android
 ---

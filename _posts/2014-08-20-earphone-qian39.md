@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 耳机初烧——潜39
+description: 对入门级发烧耳机潜39进行了简单的评测，并介绍了煲机的一些方法。
 categories: 生活
 tags: 数码
 ---

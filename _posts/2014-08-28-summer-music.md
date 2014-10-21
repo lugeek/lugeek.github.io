@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 夏天的纯音乐
+description: 收录了适合夏天听的动漫纯音乐，非常好听，享受夏天，西瓜，蝉鸣，雷雨，阳光，风扇，啤酒，单车，棒冰，凉席给你带来不一样的享受。
 categories: 生活
 tags: music
 ---

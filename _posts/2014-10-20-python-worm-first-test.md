@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Python爬虫初体验
+description: Python是一种非常灵活易学的脚本语言，本文写了一个小爬虫实现了非常简单的网页内容抓取。
 categories: 技术
 tags: Python
 ---

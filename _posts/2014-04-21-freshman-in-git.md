@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Freshman in Git
+decsription: 初学Git的速查笔记以及一些实用的教程。
 categories:
 - 技术
 tags:

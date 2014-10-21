@@ -1,6 +1,7 @@
 ---
 layout: post
 title: PC端与Android端音频的实时传输与绘制波形
+description: 使用socket通信实现了pc端和android端的实时数据传输，并且利用surfaceview绘制波形图。
 categories:
 - 技术
 tags:

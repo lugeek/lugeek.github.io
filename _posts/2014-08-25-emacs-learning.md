@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs 速查笔记
+description: 这是神的编辑器Emacs的速查学习笔记，包括一些插件的安装，环境的搭建。
 categories: 技术
 tags: Emacs
 ---
