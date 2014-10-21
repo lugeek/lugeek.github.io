@@ -5,7 +5,7 @@ layout: default
   <article class="article">
       <div class="article-date1">
       	<!-- 结构化数据-->
-        <a href="{{ post.url }}" class="article-date2"><span itemprop="datePublished">{{ page.date | date:"%Y/%m/%d" }}</span></a>
+        <a itemprop="url" href="{{ post.url }}" class="article-date2"><span itemprop="datePublished">{{ page.date | date:"%Y/%m/%d" }}</span></a>
       </div>
       <div class="article-inner">
 		  <header class="article-header">
