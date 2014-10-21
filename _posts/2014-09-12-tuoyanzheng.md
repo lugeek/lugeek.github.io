@@ -5,7 +5,7 @@ categories: 生活
 tags: 拖延症
 ---
 
-![拖延症]({{ site.url }}/images/2014-09-12/tuoyanzheng.gif)
+![拖延症]({{ site.url }}/images/2014-09-12/tuoyanzheng.jpg)
 
 不知道从什么时候出现了“拖延症”这种病，也不知道从什么时候开始我居然患了这种病，在这种病流行以前，我以为这是懒。既然是病，那得好好治一治啊！
 
