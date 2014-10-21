@@ -195,6 +195,13 @@ margin:0;
   text-decoration: none;
 }
 
+.article-more-link a:hover{
+  background:#258fb8;
+  color:#fff;
+  text-decoration:none;
+  text-shadow:0 1px #1e7293
+}
+
 .article-footer {
   zoom: 1;
   font-size: .85em;
