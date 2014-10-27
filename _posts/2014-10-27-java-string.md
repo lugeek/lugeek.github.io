@@ -38,8 +38,8 @@ implements Serializable, Comparable<String>, CharSequence
 
 ####方法
 
-|1|2|3
-|---|---|---|
+|1|2|3|
+|:---:|:---:|:---:|
 |asdfasd|asdfasdf|asdfasdf|
 |asdf|adsfasd|dfa|
 
