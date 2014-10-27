@@ -38,7 +38,7 @@ implements Serializable, Comparable<String>, CharSequence
 
 ####方法
 |Return|Method|Describe|
-|------|------|--------|
+|:------|:------|:--------|
 |char  |`charAt`(int index)|返回指定位置（0 ~ length()-1）的字符|
 |int   |`codePointAt`(int index)|返回字符串指定位置的Unicode代码点(ps.Java中的char占用两个字节，采用Unicode编码)|
 |int|`codePointBefore`(int index)|返回字符串所在索引－1的Unicode代码点|
@@ -134,7 +134,7 @@ implements Serializable, CharSequence
 
 ####方法
 |Return|Method|Describe|
-|------|------|--------|
+|:------|:------|:--------|
 |int|`capacity`()|获取stringbuffer的当前容量|
 |void|`ensureCapacity`(int minimumCapacity)|使stringbuffer的容量大于指定的容量|
 |StringBuffer|`delete`(int start, int end)|删除（end－start）个字符，从start到end-1的字符|
