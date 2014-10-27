@@ -40,7 +40,7 @@ implements Serializable, Comparable<String>, CharSequence
 
 |Return|Method|Describe|
 |:------|:------|:--------|
-|char  |`charAt`(int index)|返回指定位置（0 ~ length()-1）的字符|
+|1char  |`charAt`(int index)|返回指定位置（0 ~ length()-1）的字符|
 |int   |`codePointAt`(int index)|返回字符串指定位置的Unicode代码点(ps.Java中的char占用两个字节，采用Unicode编码)|
 |int|`codePointBefore`(int index)|返回字符串所在索引－1的Unicode代码点|
 |int|`codePointCount`(int beginIndex, int endIndex)|返回制定范围内的Unicode代码点的个数|
