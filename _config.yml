@@ -1,6 +1,8 @@
 name: 人强码壮
 author: LUGEEK
 markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
 pygments: true
 url: http://lugeek.com
 permalink: /:year/:month/:day/:title/
