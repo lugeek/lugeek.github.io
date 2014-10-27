@@ -37,6 +37,7 @@ implements Serializable, Comparable<String>, CharSequence
 6. `String(StringBuilder builder)`:stringbuilder转换为string。
 
 ####方法
+
 |Return|Method|Describe|
 |:------|:------|:--------|
 |char  |`charAt`(int index)|返回指定位置（0 ~ length()-1）的字符|
@@ -133,6 +134,7 @@ implements Serializable, CharSequence
 3. `StringBuffer(int capacity)`:初始化指定容量的StringBuffer(建议)
 
 ####方法
+
 |Return|Method|Describe|
 |:------|:------|:--------|
 |int|`capacity`()|获取stringbuffer的当前容量|
