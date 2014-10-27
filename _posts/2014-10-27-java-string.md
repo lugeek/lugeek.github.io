@@ -38,6 +38,12 @@ implements Serializable, Comparable<String>, CharSequence
 
 ####方法
 
+|1|2|3
+|---|---|---|
+|asdfasd|asdfasdf|asdfasdf|
+|asdf|adsfasd|dfa|
+
+
 |Return|Method|Describe|
 |:------|:------|:--------|
 |1char  |`charAt`(int index)|返回指定位置（0 ~ length()-1）的字符|
