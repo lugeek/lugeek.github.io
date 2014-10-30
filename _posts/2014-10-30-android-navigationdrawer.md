@@ -418,16 +418,16 @@ public class NavigationDrawerFragment extends Fragment {
 #Drawer点击事件的响应过程
 1. 监听函数的设置
 
-		```java
+```java
 		mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectItem(position);
             }
         });
-        ```
+```
+    * 监听函数里面又调用了`selectItem(position)`
     
-    监听函数里面又调用了`selectItem(position)`
 2. selectItem(int position)
 		```java
 		private void selectItem(int position) {
@@ -469,8 +469,7 @@ public class NavigationDrawerFragment extends Fragment {
 	        fragmentManager.beginTransaction()
 	                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
 	                .commit();
-	    }
-	    
+	    } 
 	* 将activity_main布局中R.id.container部分用新的fragment实体替换掉
 
 #例子
