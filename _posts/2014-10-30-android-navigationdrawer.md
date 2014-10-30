@@ -417,17 +417,19 @@ public class NavigationDrawerFragment extends Fragment {
 
 #Drawer点击事件的响应过程
 1. 监听函数的设置
-		
+
+		```java
 		mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectItem(position);
             }
         });
+        ```
     
     监听函数里面又调用了`selectItem(position)`
 2. selectItem(int position)
-
+		```java
 		private void selectItem(int position) {
 	        mCurrentSelectedPosition = position;
 	        if (mDrawerListView != null) {
@@ -440,9 +442,9 @@ public class NavigationDrawerFragment extends Fragment {
 	            mCallbacks.onNavigationDrawerItemSelected(position);
 	        }
     	}
-    	
+    	```
     + 将当前位置mCurrentSelectedPosition置为当前点击的位置
-    ＋ 将被点击的位置突出标记
+    + 将被点击的位置突出标记
     + 将drawer关闭
     + 调用接口回调函数onNavigationDrawerItemSelected执行具体的点击事件
 3. onNavigationDrawerItemSelected接口
