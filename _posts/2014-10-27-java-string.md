@@ -3,7 +3,7 @@ layout: post
 title: Java中的String小记
 description: 关于Java中的String的一个总结小记，包含String的详细分析，同时阐述了StringBuffer，比较了他们之间的不同，同时阐述了线程安全的概念包括测试。
 categories: 技术
-tags: Java
+tags: java
 ---
 
 ![钢之炼金术师]({{ site.url }}/images/2014-10-27/fullmedal.jpg)

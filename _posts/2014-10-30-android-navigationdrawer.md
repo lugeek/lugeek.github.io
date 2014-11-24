@@ -3,7 +3,7 @@ layout: post
 title: Android中NavigationDrawer的分析
 description: Android中自带的NavigationDrawer是一个非常流行的组件，此文是对它的简要分析，梳理了它的实现过程，帮助理解。
 categories: 技术
-tags: Android
+tags: android
 ---
 
 ![drawer]({{ site.url }}/images/2014-10-30/face.jpg)

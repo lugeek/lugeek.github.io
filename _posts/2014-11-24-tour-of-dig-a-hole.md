@@ -3,7 +3,7 @@ layout: post
 title: 记一次挖坑之旅
 description: 使用Python的爬虫获取网站上的信息，再存储到数据库中，采用基于Java的Play框架负责接受json请求并返回从数据库中取出的json数据，Android端作为客户端，采用Volley的Http框架来通信。
 categories: 技术
-tags: android, java, python, mysql
+tags: android java python mysql
 ---
 
 ![dighole]({{ site.url }}/images/2014-11-24/dighole.png)
@@ -579,7 +579,11 @@ public class BaseDao {
 
 那么问题来了……
 
+![error]({{ site.url }}/images/2014-11-24/error.png)
+
 我的vps是入门级的，参数非常低，内存才512MB，让我出乎意料的是activator根本运行不起来……
+
+![vps]({{ site.url }}/images/2014-11-24/vps.png)
 
 修改jvm的内存Xms之类的，用尽了各种方法始终不行，java的应用就这么吃内存？我算是见识到了…坑啊，这个坑我已经填不上了…买不起配置高的vps啊…
 
