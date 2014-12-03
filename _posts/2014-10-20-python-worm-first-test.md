@@ -3,7 +3,7 @@ layout: post
 title: Python爬虫初体验
 description: Python是一种非常灵活易学的脚本语言，本文写了一个小爬虫实现了非常简单的网页内容抓取。
 categories: 技术
-tags: Python
+tags: python
 ---
 ![Pythonworm]({{ site.url }}/images/2014-10-20/life-is-short.jpg)
 Life is short, you need Python.
@@ -19,7 +19,7 @@ Life is short, you need Python.
 <script type="text/javascript">
 function daan_chakan(daan,tihao){
 	var daan=daan;
-	alert('正确答案是：' + daan);
+	alert('正确答案是：' + daan); 
 }
 </script>
 ```
