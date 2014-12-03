@@ -22,7 +22,7 @@ implements Serializable, Comparable<String>, CharSequence
 * 以下两种创建字符串的方法是等价的：
 	
 	```java
-	String str = "abc";
+	String str = "abc"; 
 	char data[] = {'a', 'b', 'c'};
 	String str = new String(data);	
 	```
