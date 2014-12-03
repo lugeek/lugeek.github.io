@@ -75,7 +75,7 @@ n! = n x (n-1) x (n-2) x ... x 1
 ```
 ▲ 计算阶乘，上面的f函数相当于`今天星期几`,`f(1)=1`是初始值，也即边界条件，相当于`小强知道星期天`,从f(n)算到f(1),然后再从f(1)的初始值依次返回，得到f(n)的值，这个实现过程很像栈，后进先出，f(1)是最后被调用但是最先返回。既然递归是用堆栈实现的，那就要留意递归的层数了，层数如果超出堆栈的最大长度，那估计就会堆栈溢出了，这也是递归要小心的地方。
 
-```
+```java
 public class test {
     public static void main(String[] args){
         for (int i = 1; i <= 10; i++) {
@@ -100,7 +100,7 @@ public class test {
 
 二叉树由根节点，左子树和右子树构成，数据结构为`lchild data rchild`。`lchild`或`rchild`有可能为null。
 
-```
+```python
 class Node:
   def __init__(self, data, left = None, right = None):
     self.data = data
@@ -109,7 +109,7 @@ class Node:
 ```
 ▲ Python实现的二叉树数据机构
 
-```
+```python
 g = Node('G')
 h = Node('H')
 e = Node('E', g, h)
@@ -123,7 +123,7 @@ root = a
 ```
 ▲ 定义的时候从最底层开始，最后到根节点（就是上面图中的二叉树）
 
-```
+```python
 def VisitTree_Recursive(root, order):
   if root:
     if order == 'NLR': print(root.data)
@@ -140,7 +140,7 @@ def VisitTree_Recursive(root, order):
 
 对于后序遍历LRN，则是先遍历左子树和右子树，最后打印根节点数据。
 
-```
+```java
 public class test {
     public static void main(String[] args){
         node g = new node("G", null, null);
@@ -187,7 +187,7 @@ class node{
 ##四. 问题
 1. 求二叉树节点个数
 
-	```
+	```java
 	public static int node_num(node root){
         if(root == null){
             return 0;
@@ -199,7 +199,7 @@ class node{
 
 2. 求二叉树深度
 	
-	```
+	```java
 	public static int getDepth(node root){
         if(root == null){
             return 0;
@@ -211,7 +211,7 @@ class node{
 
 3. 层序遍历
 	
-	```
+	```java
 	public static void levelOrder(node root){
         Queue<node> queue = new LinkedList<node>();
         queue.offer(root);
@@ -236,7 +236,7 @@ class node{
 	```
 	▲ 递归的公式以及边界条件，这样推导之后清楚很多。
 	
-	```
+	```java
 	public static int getLevelNum(node root,int k){
         if (root == null || k < 1){
             return 0;
@@ -251,7 +251,7 @@ class node{
 
 5. 获取叶子节点数
 
-	```
+	```java
 	public static int getLeaves(node root){
         if(root == null){
             return 0;
@@ -265,7 +265,7 @@ class node{
 	
 6. 非递归前序遍历
 	
-	```
+	```java
 	/**
      * 非递归前序遍历:进栈是前序遍历，出栈是中序遍历。
      * @param root
@@ -288,7 +288,7 @@ class node{
 
 7. 非递归中序遍历
 	
-	```
+	```java
 	public static void printLNR(node root){
         Stack<node> stack = new Stack<node>();
         while (root != null || !stack.empty()){
@@ -307,7 +307,7 @@ class node{
 
 8. 非递归后序遍历
 	
-	```
+	```java
 	public static void printLRN(node root){
         Stack<node> stack = new Stack<node>();
         node pre = null;
@@ -329,7 +329,7 @@ class node{
 
 9. 最小公共祖先
 
-	```
+	```java
 	public static node printLCA(node root, node n1, node n2){
         Stack<node> stack = new Stack<node>();
         Stack<node> s1 = new Stack<node>();
@@ -394,7 +394,7 @@ B+树相比于B树，内部节点(非叶子节点)只保存键值，不保存有
 
 ▲ B树和B+树的区别
 
-参考文献:
+##参考文献:
 
 [程序基本功系列--GoCalf Blog](http://www.gocalf.com/blog/traversing-binary-tree.html)
 
