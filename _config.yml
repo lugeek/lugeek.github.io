@@ -1,4 +1,4 @@
-name: 人强码壮
+﻿name: 人强码壮
 author: LUGEEK
 markdown: redcarpet
 redcarpet:
@@ -7,4 +7,4 @@ pygments: true
 url: http://lugeek.com
 permalink: /:year/:month/:day/:title/
 paginate: 5
-year: 2014
+year: 2015
