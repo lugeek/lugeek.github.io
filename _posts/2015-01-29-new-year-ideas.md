@@ -50,19 +50,15 @@ tags: idea
 	* [利用java实现数据结构中常用的插入排序和快速排序算法](http://www.cnblogs.com/lee/archive/2007/05/11/743381.html)
 	* [Java中Set Map List 的区别](http://www.cnblogs.com/xiaofengkang/p/3859457.html)
 	* [很有意思的可视化排序算法](http://top.jobbole.com/1229/)
-4. java正则表达式
+2. java正则表达式
 	* [W3Cjava正则表达式](http://www.w3cschool.cc/java/java-regular-expressions.html)
-5. Java Web
+3. Java Web
 	* [如何快速上手java web](http://segmentfault.com/q/1010000000400073)
-	
-		JSP -> Servlet -> Java SSH Framework
-		
-		《HeadFirst Servlet&JSP》书
-		
+		* JSP -> Servlet -> Java SSH Framework	
+		* 《HeadFirst Servlet&JSP》书		
 	* [初学 Java Web 开发，请远离各种框架，从 Servlet 开发](http://www.oschina.net/question/12_52027)
 	* [怎样用java写server端？](http://segmentfault.com/q/1010000000364063#a-1020000000364524)
-	* ok
-7. [Java快速教程-Vamei](http://www.cnblogs.com/vamei/archive/2013/03/31/2991531.html)
+4. [Java快速教程-Vamei](http://www.cnblogs.com/vamei/archive/2013/03/31/2991531.html)
 
 ###Python
 1.  flask框架
