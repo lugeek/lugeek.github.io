@@ -1,4 +1,4 @@
-此Git库为我的博客——**[人强码壮](http://lugeek.github.io)**
+此Git库为我的博客——**[人强码壮](http://lugeek.com)**
 
 使用Jekyll搭建在github上，使用Markdown撰写博文，像黑客一样写博客！
 
