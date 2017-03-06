@@ -6,6 +6,6 @@ categories: 技术
 tags: Android Gradle
 ---
 
-![face]({{ site.url }}/images/2015-07-07/gradle.png)
+![face]({{ site.url }}/images/2017-03-06/gradle.png)
 
 😄
