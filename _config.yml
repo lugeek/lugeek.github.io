@@ -1,10 +1,10 @@
 ﻿name: 人强码壮
 author: LUGEEK
-markdown: redcarpet
-redcarpet:
+markdown: kramdown
+kramdown:
   extensions: ["tables"]
 pygments: true
 url: http://lugeek.com
 permalink: /:year/:month/:day/:title/
 paginate: 5
-year: 2015
+year: 2017
