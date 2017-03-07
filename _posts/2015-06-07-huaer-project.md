@@ -30,19 +30,19 @@ tags: App
 
 最后分享一些项目开发过程中用到的小技巧和小玩意儿吧！
 
-####1. 正则表达式小工具
+#### 1. 正则表达式小工具
 顺手写了一个非常简单的正则表达式小工具App，可以实时输出匹配结果。
 
 [Github](https://github.com/lugeek/android_regular)
 
 [apk下载地址](http://7xiq48.com1.z0.glb.clouddn.com/regular.apk)
 
-####2. 色彩
+#### 2. 色彩
 谷歌的color设计推荐[google color style](https://www.google.com/design/spec/style/color.html#color-color-palette)
 
 一个非常棒的调色工具[color generator](http://coolors.co/browser)
 
-####3. 图标
+#### 3. 图标
 团队没有美工，只能借助一些小工具了。
 
 google自己的[Material icons](https://www.google.com/design/icons/)
@@ -57,18 +57,18 @@ google自己的[Material icons](https://www.google.com/design/icons/)
 
 如果需要一个美化的图标，则可以通过free icon maker制作，它同时支持导入flaticon的svg文件。
 
-####4. App原型设计小工具
+#### 4. App原型设计小工具
 [墨刀](https://xn--ebr05n.com/)
 
-####5. 9 patch image
+#### 5. 9 patch image
 [Draw 9 patch image for android online](http://draw9patch.com/)
 
 
 ####6. Material UI和layout列表
 虽然项目中没怎么用到，但还是忍不住分享了！这个之前记得没有很多，这次点开发现搜集的相当全面了！[许许多多非常棒的开源组件](https://github.com/wasabeef/awesome-android-ui)
 
-####参考资料
-#####1.后端
+#### 参考资料
+##### 1.后端
 + [欢迎使用 Flask](http://docs.jinkan.org/docs/flask/)
 + [Flask-SQLAlchemy](http://docs.jinkan.org/docs/flask-sqlalchemy/index.html) 
 + [Flask之旅](https://spacewander.github.io/explore-flask-zh/index.html)
@@ -77,7 +77,7 @@ google自己的[Material icons](https://www.google.com/design/icons/)
 + [使用 Python 和 Flask 设计 RESTful API](http://www.pythondoc.com/flask-restful/first.html)
 + [Let’s Build A Web Server--最近看到的一个非常好的server入门教程](http://ruslanspivak.com/archives.html)
 
-#####2. Android端
+##### 2. Android端
 + Material风格的导航抽屉[MaterialDrawer](https://github.com/mikepenz/MaterialDrawer)
 + [android：ToolBar详解（手把手教程）](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1118/2006.html)
 + [使用Toolbar + DrawerLayout快速实现高大上菜单侧滑](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0303/2522.html)
@@ -96,7 +96,7 @@ google自己的[Material icons](https://www.google.com/design/icons/)
 + 图片框架[picasso](https://github.com/square/picasso)
 
 
-#####App完成后看到的一些非常有启发性的文章
+##### App完成后看到的一些非常有启发性的文章
 + android软件架构方面，软件大了之后不好维护。[Android中的MVP](http://zhengxiaopeng.com/2015/02/06/Android%E4%B8%AD%E7%9A%84MVP/)
 + 回调接口的处理[Otto: No more callbacks](http://segmentfault.com/a/1190000002811995)
 + 一个完整系统的方方面面 [一步步搭建物联网系统](https://github.com/phodal/designiot)
