@@ -10,7 +10,7 @@ tags: Python
 
 最近写论文需要处理一些数据并绘图，首先想到的是MATLAB，但是MATLAB感觉太重了，而且是个商业软件于是自然就想到了Python。曾经看到过Matplotlib的强大，所以也来实践一下。
 
-###一 pylab
+### 一 pylab
 Matplotlib主要有两种用法，实际的效果都是一样的，但是应用场景不一样。第一种便是pylab，主要应用于IPython这样的终端，可以像使用MATLAB一样使用Matplotlib。
 
 下面是一个简单的例子：
@@ -75,7 +75,7 @@ show()
 
 ![pic]({{ site.url }}/images/2015-07-07/test1.png)
 
-###二 pyplot
+### 二 pyplot
 使用pyplot绘图，它具有函数式的绘图方式，也具有面向对象式的绘图方式。和上述的pylab类似。代码如下：
 
 ```python
@@ -131,14 +131,14 @@ plt.show()
 
 ![pic]({{ site.url }}/images/2015-07-07/figure_mydata.png)
 
-###好玩！
+### 好玩！
 最后展示一个好玩的功能！最近大家都很关心炒股，让我们用Matplotlib来绘制股票的涨跌图，看看股市的行情吧！
 
 ![pic]({{ site.url }}/images/2015-07-07/figure_dapan.png)
 
 使用requests请求新浪接口的数据，解析数据并使用Matplotlib绘制动态图。其实好好弄的话可以很强大，没有精力折腾了，况且我也不炒股，纯粹凑个热闹，哈哈！现已开源到[Github](https://github.com/lugeek/matplotlib-stock)。
 
-####参考文献：
+#### 参考文献：
 
 + [Vamei-matplotlib核心剖析](http://www.cnblogs.com/vamei/archive/2013/01/30/2879700.html)
 + [Python图表绘制：matplotlib绘图库入门](http://www.cnblogs.com/wei-li/archive/2012/05/23/2506940.html)
